@@ -55,7 +55,7 @@ if __name__ == '__main__':
         content_y = y.read()
         similarity = MinHashSimilarity(content_x, content_y)
         similarity = similarity.main()
-        results = '【'+file1+'】'+ ' 与 【' + file2 +'】 相似度: %.2f%%' % (similarity*100)+'\n'
+        results = '('+file1+')'+ ' 跟 (' + file2 +') 相似度: %.2f%%' % (similarity*100)+'\n'
         file3 = open("result.txt","a",encoding='utf-8')
         file3.write(results)
         file3.close()
